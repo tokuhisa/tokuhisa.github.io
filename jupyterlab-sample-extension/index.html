@@ -18,14 +18,14 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
 <meta property="og:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
 JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
 普段">
-<meta property="og:image" content="http://fumiaki.xyz/jupyterlab.png">
-<meta property="og:updated_time" content="2016-09-19T03:47:25.000Z">
+<meta property="og:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
+<meta property="og:updated_time" content="2016-09-19T05:03:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JupyterLabの拡張機能を作ってみた">
 <meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
 JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
 普段">
-<meta name="twitter:image" content="http://fumiaki.xyz/jupyterlab.png">
+<meta name="twitter:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
     
 
     
@@ -169,7 +169,7 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <h1 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h1><p>JupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．<br>まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．</p>
-<h1 id="JupyterLabについて"><a href="#JupyterLabについて" class="headerlink" title="JupyterLabについて"></a>JupyterLabについて</h1><p>JupyterLabは，Jupyter Notebookをベースに拡張したものです．<br>Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．<br><img src="jupyterlab.png" alt="" title="jupyterlab"></p>
+<h1 id="JupyterLabについて"><a href="#JupyterLabについて" class="headerlink" title="JupyterLabについて"></a>JupyterLabについて</h1><p>JupyterLabは，Jupyter Notebookをベースに拡張したものです．<br>Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．<br><img src="/jupyterlab-sample-extension/jupyterlab.png" alt="" title="jupyterlab"></p>
 <p>普段は，Jupyter Notebookを使っており，そろそろJupyterLabに乗り換えたいなーと思ってます．</p>
 <h1 id="JupyterLabの拡張機能について"><a href="#JupyterLabの拡張機能について" class="headerlink" title="JupyterLabの拡張機能について"></a>JupyterLabの拡張機能について</h1><p>拡張機能の仕組みは，できてから日が浅いようでドキュメントもほとんどないです．<br>今回は，以下のページを参考にしました．</p>
 <ul>
@@ -197,7 +197,7 @@ ga('send', 'pageview');
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> build</div><div class="line">python <span class="built_in">setup</span>.py install</div></pre></td></tr></table></figure>
 <p>拡張機能としてインストールすれば，使えるようになります．</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jupyter labextension <span class="keyword">install</span> <span class="comment">--py samplelabextension</span></div><div class="line">jupyter labextension <span class="keyword">enable</span> samplelabextension <span class="comment">--py</span></div></pre></td></tr></table></figure>
-<p>JupyterLabを起動すれば，新たなCommandsが追加され，独自のhtmlを表示できています．<br><img src="samplelabextension.png" alt="" title="samplelabextension"></p>
+<p>JupyterLabを起動すれば，新たなCommandsが追加され，独自のhtmlを表示できています．<br><img src="/jupyterlab-sample-extension/samplelabextension.png" alt="" title="samplelabextension"></p>
 
         </div>
         <footer class="article-footer">
@@ -327,7 +327,7 @@ ga('send', 'pageview');
                             <a href="/jupyterlab-sample-extension/" class="thumbnail">
     
     
-        <span style="background-image:url(jupyterlab.png)" alt="JupyterLabの拡張機能を作ってみた" class="thumbnail-image"></span>
+        <span style="background-image:url(/jupyterlab-sample-extension/jupyterlab.png)" alt="JupyterLabの拡張機能を作ってみた" class="thumbnail-image"></span>
     
     
 </a>
