@@ -3,24 +3,29 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>確率不等式(probability inequalities) | fumiaki.xyz</title>
+    <title>JupyterLabの拡張機能を作ってみた | fumiaki.xyz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="確率不等式" />
+        <meta name="keywords" content="jupyterlab" />
     
-    <meta name="description" content="マルコフの不等式任意の確率変数$x$に対して，$a&amp;gt;0$とすると，$$\mathrm{Pr}(|x| \geq a) \leq \frac{\mathrm{E}(|x|)}{a}$$
-チェビシェフの不等式確率変数$x$が期待値$\mathrm{E}[x]$，分散$\mathrm{V}[x]$をもつとき，任意の実数$\epsilon &amp;gt; 0$に対して，$$\mathrm{Pr}(|x -">
+    <meta name="description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
+JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
+普段">
 <meta property="og:type" content="article">
-<meta property="og:title" content="確率不等式(probability inequalities)">
-<meta property="og:url" content="http://fumiaki.xyz/probability-inequalities/index.html">
+<meta property="og:title" content="JupyterLabの拡張機能を作ってみた">
+<meta property="og:url" content="http://fumiaki.xyz/jupyterlab-sample-extension/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
-<meta property="og:description" content="マルコフの不等式任意の確率変数$x$に対して，$a&amp;gt;0$とすると，$$\mathrm{Pr}(|x| \geq a) \leq \frac{\mathrm{E}(|x|)}{a}$$
-チェビシェフの不等式確率変数$x$が期待値$\mathrm{E}[x]$，分散$\mathrm{V}[x]$をもつとき，任意の実数$\epsilon &amp;gt; 0$に対して，$$\mathrm{Pr}(|x -">
-<meta property="og:updated_time" content="2016-09-18T16:15:24.000Z">
+<meta property="og:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
+JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
+普段">
+<meta property="og:image" content="http://fumiaki.xyz/jupyterlab.png">
+<meta property="og:updated_time" content="2016-09-19T03:47:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="確率不等式(probability inequalities)">
-<meta name="twitter:description" content="マルコフの不等式任意の確率変数$x$に対して，$a&amp;gt;0$とすると，$$\mathrm{Pr}(|x| \geq a) \leq \frac{\mathrm{E}(|x|)}{a}$$
-チェビシェフの不等式確率変数$x$が期待値$\mathrm{E}[x]$，分散$\mathrm{V}[x]$をもつとき，任意の実数$\epsilon &amp;gt; 0$に対して，$$\mathrm{Pr}(|x -">
+<meta name="twitter:title" content="JupyterLabの拡張機能を作ってみた">
+<meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
+JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
+普段">
+<meta name="twitter:image" content="http://fumiaki.xyz/jupyterlab.png">
     
 
     
@@ -123,18 +128,18 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/Note/">Note</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Note/確率不等式/">確率不等式</a>
+    <a class="page-title-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Diary/jupyterlab/">jupyterlab</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-probability-inequalities" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-jupyterlab-sample-extension" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        確率不等式(probability inequalities)
+        JupyterLabの拡張機能を作ってみた
         </h1>
     
 
@@ -142,21 +147,46 @@
         
         
             <div class="article-subtitle">
-                <a href="/probability-inequalities/" class="article-date">
-    <time datetime="2015-11-17T18:02:47.000Z" itemprop="datePublished">2015-11-18</time>
+                <a href="/jupyterlab-sample-extension/" class="article-date">
+    <time datetime="2016-09-19T01:22:35.000Z" itemprop="datePublished">2016-09-19</time>
 </a>
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/確率不等式/">確率不等式</a></li></ul>
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jupyterlab/">jupyterlab</a></li></ul>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h3 id="マルコフの不等式"><a href="#マルコフの不等式" class="headerlink" title="マルコフの不等式"></a>マルコフの不等式</h3><p>任意の確率変数$x$に対して，$a&gt;0$とすると，<br>$$\mathrm{Pr}(|x| \geq a) \leq \frac{\mathrm{E}(|x|)}{a}$$</p>
-<h3 id="チェビシェフの不等式"><a href="#チェビシェフの不等式" class="headerlink" title="チェビシェフの不等式"></a>チェビシェフの不等式</h3><p>確率変数$x$が期待値$\mathrm{E}[x]$，分散$\mathrm{V}[x]$をもつとき，任意の実数$\epsilon &gt; 0$に対して，<br>$$\mathrm{Pr}(|x - \mathrm{E}[x]| \geq \epsilon) \leq \frac{\mathrm{V}[x]}{\epsilon^2}$$</p>
-<h3 id="チェルノフの不等式"><a href="#チェルノフの不等式" class="headerlink" title="チェルノフの不等式"></a>チェルノフの不等式</h3><p>任意の確率変数$x$に対して，$t&gt;0$とすると，</p>
-<p>$$\mathrm{Pr}(x \geq a) \leq \frac{\mathrm{E}(\exp(tx))}{\exp(ta)}$$</p>
-<p>右辺を$t$に関して最小化すれば，より正確な上界が得られる．</p>
+            <h1 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h1><p>JupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．<br>まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．</p>
+<h1 id="JupyterLabについて"><a href="#JupyterLabについて" class="headerlink" title="JupyterLabについて"></a>JupyterLabについて</h1><p>JupyterLabは，Jupyter Notebookをベースに拡張したものです．<br>Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．<br><img src="jupyterlab.png" alt="" title="jupyterlab"></p>
+<p>普段は，Jupyter Notebookを使っており，そろそろJupyterLabに乗り換えたいなーと思ってます．</p>
+<h1 id="JupyterLabの拡張機能について"><a href="#JupyterLabの拡張機能について" class="headerlink" title="JupyterLabの拡張機能について"></a>JupyterLabの拡張機能について</h1><p>拡張機能の仕組みは，できてから日が浅いようでドキュメントもほとんどないです．<br>今回は，以下のページを参考にしました．</p>
+<ul>
+<li><a href="https://media.readthedocs.org/pdf/jupyterlab-tutorial/latest/jupyterlab-tutorial.pdf" target="_blank" rel="external">JupyterLab Tutorial Documentation</a> : JupyterLabの一般的なチュートリアル</li>
+<li><a href="https://github.com/jupyter/jupyterlab-extension-builder" target="_blank" rel="external">JupyterLab Extension Builder</a> : JupyterLabの拡張機能を作るツール</li>
+<li><a href="https://github.com/ipython/ipywidgets/tree/1124b3cc1f5509a629b672e925ff017235bf53aa/widgetslabextension" target="_blank" rel="external">Jupyter Widgets JupyterLab Extension</a> : JupyterLabの拡張機能のプロジェクトは，これ以外見当たらなかった</li>
+<li><a href="https://github.com/jupyter/jupyterlab/pull/814" target="_blank" rel="external">Enable Third Party Extensions #814</a> </li>
+</ul>
+<h1 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h1><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="external">samplelabextension</a>という名前で作ります．</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> samplelabextension</div><div class="line"><span class="built_in">cd</span> samplelabextension</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save jupyterlab</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save phosphor</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev jupyterlab-extension-builder</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev rimraf</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typedoc</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typescript</span></div></pre></td></tr></table></figure>
+<p>次に，<a href="https://github.com/tokuhisa/samplelabextension/tree/master/src" target="_blank" rel="external">samplelabextension/src</a> ディレクトリ下に拡張機能のスクリプトを書きます．<br>今回は，独自のhtmlを表示する拡張機能とし，typescriptで書きました．</p>
+<ul>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/tsconfig.json" target="_blank" rel="external">samplelabextension/src/tsconfig.json</a> : typescriptの設定</li>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/plugin.ts" target="_blank" rel="external">samplelabextension/src/plugin.ts</a> : 拡張機能のエントリーポイントとなるスクリプト</li>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/html.ts" target="_blank" rel="external">samplelabextension/src/html.ts</a> : 表示するhtml</li>
+</ul>
+<p>このスクリプトは後でjavascriptに変換して samplelabextension/lib ディレクトリ下に保存されます．</p>
+<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/scripts/buildExtension.js" target="_blank" rel="external">samplelabextension/scripts/buildExtension.js</a> を使って， 拡張機能のスクリプトをビルドします．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">var buildExtension = require(&apos;jupyterlab-extension-builder&apos;).buildExtension;</div><div class="line"></div><div class="line">buildExtension(&#123;</div><div class="line">  name: &apos;samplelabextension&apos;,</div><div class="line">  entry: &apos;./lib/plugin&apos;,</div><div class="line">  outputDir : &apos;./samplelabextension/static&apos;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>あとは，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/package.json" target="_blank" rel="external">package.json</a>のscriptsに色々書いたり，</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"clean"</span>: <span class="string">"rimraf docs &amp;&amp; rimraf lib &amp;&amp; rimraf samplelabextension/static"</span>,</div><div class="line">    <span class="string">"build:src"</span>: <span class="string">"tsc --project src"</span>,</div><div class="line">    <span class="string">"build:extension"</span>: <span class="string">"node scripts/buildExtension.js"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"npm run build:src &amp;&amp; npm run build:extension"</span>,</div><div class="line">    <span class="string">"example:browser"</span>: <span class="string">"cd examples/browser &amp;&amp; npm run update &amp;&amp; npm run build"</span>,</div><div class="line">    <span class="string">"example:node"</span>: <span class="string">"cd examples/node &amp;&amp; npm install"</span>,</div><div class="line">    <span class="string">"build:examples"</span>: <span class="string">"npm run example:browser &amp;&amp; npm run example:node"</span>,</div><div class="line">    <span class="string">"docs"</span>: <span class="string">"typedoc --mode file --module commonjs --excludeNotExported --target es5 --moduleResolution node --out docs/ src"</span>,</div><div class="line">    <span class="string">"prepublish"</span>: <span class="string">"npm run build"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
+<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/setup.py" target="_blank" rel="external">setup.py</a>に色々書いたり，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/MANIFEST.in" target="_blank" rel="external">MANIFEST.in</a>を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/__init__.py" target="_blank" rel="external">samplelabextension/samplelabextension/__init__.py</a> を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/_version.py" target="_blank" rel="external">samplelabextension/samplelabextension/_version.py</a> を書いたりすれば終わりです．</p>
+<p>ビルドして，</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> build</div><div class="line">python <span class="built_in">setup</span>.py install</div></pre></td></tr></table></figure>
+<p>拡張機能としてインストールすれば，使えるようになります．</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jupyter labextension <span class="keyword">install</span> <span class="comment">--py samplelabextension</span></div><div class="line">jupyter labextension <span class="keyword">enable</span> samplelabextension <span class="comment">--py</span></div></pre></td></tr></table></figure>
+<p>JupyterLabを起動すれば，新たなCommandsが追加され，独自のhtmlを表示できています．<br><img src="samplelabextension.png" alt="" title="samplelabextension"></p>
 
         </div>
         <footer class="article-footer">
@@ -261,20 +291,10 @@
         
 <nav id="article-nav">
     
-        <a href="/jupyterlab-sample-extension/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            JupyterLabの拡張機能を作ってみた
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/probability-inequalities/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hello World</p>
+        <p class="article-nav-title">確率不等式(probability inequalities)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -421,7 +441,7 @@
     var disqus_shortname = 'fumiaki-xyz';
     
     
-    var disqus_url = 'http://fumiaki.xyz/probability-inequalities/';
+    var disqus_url = 'http://fumiaki.xyz/jupyterlab-sample-extension/';
     
     (function() {
     var dsq = document.createElement('script');
@@ -450,23 +470,6 @@
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
