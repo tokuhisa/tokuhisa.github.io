@@ -19,7 +19,7 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
 JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
 普段">
 <meta property="og:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
-<meta property="og:updated_time" content="2016-09-19T05:03:17.000Z">
+<meta property="og:updated_time" content="2016-09-19T10:19:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JupyterLabの拡張機能を作ってみた">
 <meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
@@ -179,7 +179,8 @@ ga('send', 'pageview');
 <li><a href="https://github.com/jupyter/jupyterlab/pull/814" target="_blank" rel="external">Enable Third Party Extensions #814</a> </li>
 </ul>
 <h1 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h1><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="external">samplelabextension</a>という名前で作ります．</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> samplelabextension</div><div class="line"><span class="built_in">cd</span> samplelabextension</div></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> samplelabextension</div><div class="line"><span class="built_in">cd</span> samplelabextension</div><div class="line">npm init</div></pre></td></tr></table></figure>
+<p>プロジェクトに必要なライブラリをインストール</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save jupyterlab</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save phosphor</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev jupyterlab-extension-builder</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev rimraf</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typedoc</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typescript</span></div></pre></td></tr></table></figure>
 <p>次に，<a href="https://github.com/tokuhisa/samplelabextension/tree/master/src" target="_blank" rel="external">samplelabextension/src</a> ディレクトリ下に拡張機能のスクリプトを書きます．<br>今回は，独自のhtmlを表示する拡張機能とし，typescriptで書きました．</p>
 <ul>
