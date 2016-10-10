@@ -19,7 +19,7 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
 JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
 普段">
 <meta property="og:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
-<meta property="og:updated_time" content="2016-09-19T10:19:49.000Z">
+<meta property="og:updated_time" content="2016-10-08T16:27:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JupyterLabの拡張機能を作ってみた">
 <meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
@@ -80,7 +80,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/">Diary</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/RealSense/">RealSense</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/料理/">料理</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Note/">Note</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Note/確率不等式/">確率不等式</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/">Diary</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/ROS/">ROS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/RealSense/">RealSense</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/料理/">料理</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Note/">Note</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Note/確率不等式/">確率不等式</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -168,17 +168,17 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h1 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h1><p>JupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．<br>まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．</p>
-<h1 id="JupyterLabについて"><a href="#JupyterLabについて" class="headerlink" title="JupyterLabについて"></a>JupyterLabについて</h1><p>JupyterLabは，Jupyter Notebookをベースに拡張したものです．<br>Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．<br><img src="/jupyterlab-sample-extension/jupyterlab.png" alt="" title="jupyterlab"></p>
+            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>JupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．<br>まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．</p>
+<h2 id="JupyterLabについて"><a href="#JupyterLabについて" class="headerlink" title="JupyterLabについて"></a>JupyterLabについて</h2><p>JupyterLabは，Jupyter Notebookをベースに拡張したものです．<br>Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．<br><img src="/jupyterlab-sample-extension/jupyterlab.png" alt="" title="jupyterlab"></p>
 <p>普段は，Jupyter Notebookを使っており，そろそろJupyterLabに乗り換えたいなーと思ってます．</p>
-<h1 id="JupyterLabの拡張機能について"><a href="#JupyterLabの拡張機能について" class="headerlink" title="JupyterLabの拡張機能について"></a>JupyterLabの拡張機能について</h1><p>拡張機能の仕組みは，できてから日が浅いようでドキュメントもほとんどないです．<br>今回は，以下のページを参考にしました．</p>
+<h2 id="JupyterLabの拡張機能について"><a href="#JupyterLabの拡張機能について" class="headerlink" title="JupyterLabの拡張機能について"></a>JupyterLabの拡張機能について</h2><p>拡張機能の仕組みは，できてから日が浅いようでドキュメントもほとんどないです．<br>今回は，以下のページを参考にしました．</p>
 <ul>
 <li><a href="https://media.readthedocs.org/pdf/jupyterlab-tutorial/latest/jupyterlab-tutorial.pdf" target="_blank" rel="external">JupyterLab Tutorial Documentation</a> : JupyterLabの一般的なチュートリアル</li>
 <li><a href="https://github.com/jupyter/jupyterlab-extension-builder" target="_blank" rel="external">JupyterLab Extension Builder</a> : JupyterLabの拡張機能を作るツール</li>
 <li><a href="https://github.com/ipython/ipywidgets/tree/1124b3cc1f5509a629b672e925ff017235bf53aa/widgetslabextension" target="_blank" rel="external">Jupyter Widgets JupyterLab Extension</a> : JupyterLabの拡張機能のプロジェクトは，これ以外見当たらなかった</li>
 <li><a href="https://github.com/jupyter/jupyterlab/pull/814" target="_blank" rel="external">Enable Third Party Extensions #814</a> </li>
 </ul>
-<h1 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h1><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="external">samplelabextension</a>という名前で作ります．</p>
+<h2 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h2><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="external">samplelabextension</a>という名前で作ります．</p>
 <figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> samplelabextension</div><div class="line"><span class="built_in">cd</span> samplelabextension</div><div class="line">npm init</div></pre></td></tr></table></figure>
 <p>プロジェクトに必要なライブラリをインストール</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save jupyterlab</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save phosphor</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev jupyterlab-extension-builder</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev rimraf</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typedoc</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typescript</span></div></pre></td></tr></table></figure>
@@ -335,6 +335,26 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/ros-app-development-setup/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/ros-app-development-setup/debug.png)" alt="ROSのアプリ開発環境セットアップ" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/ROS/">ROS</a></p>
+                            <p class="item-title"><a href="/ros-app-development-setup/" class="title">ROSのアプリ開発環境セットアップ</a></p>
+                            <p class="item-date"><time datetime="2016-10-10T13:08:00.000Z" itemprop="datePublished">2016-10-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/realsense-robotic-devkit-setup/" class="thumbnail">
     
     
@@ -412,26 +432,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/hexo/">hexo</a></p>
-                            <p class="item-title"><a href="/hello-world/" class="title">Hello World</a></p>
-                            <p class="item-date"><time datetime="2015-11-11T12:16:33.000Z" itemprop="datePublished">2015-11-11</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -441,7 +441,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/RealSense/">RealSense</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/料理/">料理</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note/">Note</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Note/確率不等式/">確率不等式</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/ROS/">ROS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/RealSense/">RealSense</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/料理/">料理</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Note/">Note</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Note/確率不等式/">確率不等式</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -451,7 +451,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -461,7 +461,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RealSense/">RealSense</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyterlab/">jupyterlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/料理/">料理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/確率不等式/">確率不等式</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ROS/">ROS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RealSense/">RealSense</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyterlab/">jupyterlab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/料理/">料理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/確率不等式/">確率不等式</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -471,7 +471,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/RealSense/" style="font-size: 10px;">RealSense</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyterlab/" style="font-size: 10px;">jupyterlab</a> <a href="/tags/料理/" style="font-size: 10px;">料理</a> <a href="/tags/確率不等式/" style="font-size: 10px;">確率不等式</a>
+            <a href="/tags/ROS/" style="font-size: 10px;">ROS</a> <a href="/tags/RealSense/" style="font-size: 10px;">RealSense</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyterlab/" style="font-size: 10px;">jupyterlab</a> <a href="/tags/料理/" style="font-size: 10px;">料理</a> <a href="/tags/確率不等式/" style="font-size: 10px;">確率不等式</a>
         </div>
     </div>
 

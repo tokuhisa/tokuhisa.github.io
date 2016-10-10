@@ -3,15 +3,26 @@
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     
-    <title>Archive: 2015 | fumiaki.xyz</title>
+    <title>ROSのアプリ開発環境セットアップ | fumiaki.xyz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="fumiaki.xyz">
-<meta property="og:url" content="http://fumiaki.xyz/archives/2015/index.html">
+        <meta name="keywords" content="ROS" />
+    
+    <meta name="description" content="はじめにRealSenseを使ったアプリケーションを開発するために，ROSのセットアップを行いました．普段利用しているMacのOS X El Capitan上で開発するために，VMwareでUbuntuの仮想環境を構築し，CLionで開発することにしました．
+VMwareセットアップUbuntuをインストール今回は，ROS Indigoを使うので，サポートしているUbuntu 14.04をインスト">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ROSのアプリ開発環境セットアップ">
+<meta property="og:url" content="http://fumiaki.xyz/ros-app-development-setup/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
+<meta property="og:description" content="はじめにRealSenseを使ったアプリケーションを開発するために，ROSのセットアップを行いました．普段利用しているMacのOS X El Capitan上で開発するために，VMwareでUbuntuの仮想環境を構築し，CLionで開発することにしました．
+VMwareセットアップUbuntuをインストール今回は，ROS Indigoを使うので，サポートしているUbuntu 14.04をインスト">
+<meta property="og:image" content="http://fumiaki.xyz/ros-app-development-setup/debug.png">
+<meta property="og:updated_time" content="2016-10-10T13:08:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fumiaki.xyz">
+<meta name="twitter:title" content="ROSのアプリ開発環境セットアップ">
+<meta name="twitter:description" content="はじめにRealSenseを使ったアプリケーションを開発するために，ROSのセットアップを行いました．普段利用しているMacのOS X El Capitan上で開発するために，VMwareでUbuntuの仮想環境を構築し，CLionで開発することにしました．
+VMwareセットアップUbuntuをインストール今回は，ROS Indigoを使うので，サポートしているUbuntu 14.04をインスト">
+<meta name="twitter:image" content="http://fumiaki.xyz/ros-app-development-setup/debug.png">
     
 
     
@@ -125,126 +136,131 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>Archive: 2015
+    <a class="page-title-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Diary/ROS/">ROS</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
+                            <article id="post-ros-app-development-setup" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        ROSのアプリ開発環境セットアップ
+        </h1>
+    
 
-    
-    
+            </header>
         
         
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
+            <div class="article-subtitle">
+                <a href="/ros-app-development-setup/" class="article-date">
+    <time datetime="2016-10-10T13:08:00.000Z" itemprop="datePublished">2016-10-10</time>
+</a>
+                
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ROS/">ROS</a></li></ul>
+
             </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
         
-        <a href="/probability-inequalities/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://fumiaki.xyz/probability-inequalities/">0</span>
-    
-</span>
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>RealSenseを使ったアプリケーションを開発するために，ROSのセットアップを行いました．普段利用しているMacのOS X El Capitan上で開発するために，VMwareでUbuntuの仮想環境を構築し，CLionで開発することにしました．</p>
+<h2 id="VMwareセットアップ"><a href="#VMwareセットアップ" class="headerlink" title="VMwareセットアップ"></a>VMwareセットアップ</h2><h3 id="Ubuntuをインストール"><a href="#Ubuntuをインストール" class="headerlink" title="Ubuntuをインストール"></a>Ubuntuをインストール</h3><p>今回は，ROS Indigoを使うので，サポートしているUbuntu 14.04をインストール．</p>
+<h3 id="open-vm-toolsのインストール"><a href="#open-vm-toolsのインストール" class="headerlink" title="open-vm-toolsのインストール"></a>open-vm-toolsのインストール</h3><p>以下のコマンドを実行して，open-vm-toolsをインストール．画面をウィンドウサイズにあわせることなどができるようになり便利．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y open-vm-tools</div><div class="line">sudo apt-get install -y open-vm-tools-desktop</div></pre></td></tr></table></figure>
+<h3 id="キーボード設定"><a href="#キーボード設定" class="headerlink" title="キーボード設定"></a>キーボード設定</h3><p>以下のコマンドでmozcをインストール</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install ibus-mozc</div></pre></td></tr></table></figure>
+<p>使用する入力ソースをMozcに変更<br><img src="/ros-app-development-setup/input-source.png" alt="" title="mozc"></p>
+<p>Macのスペース横のEisuキーとHiraganaキーで日本語オン・オフを切り替えるために，Mozcキー設定を変更しました．<br>モードが入力変換中・変換中・入力文字なしで入力キーがEisuのときIMEを無効化，モードが直接入力で入力キーがHiraganaのときIMEを有効化します．同じモード・入力キーの組み合わせ設定が既に存在してる場合は，上書きしてください．<br><img src="/ros-app-development-setup/mozc-key-settings.png" alt="" title="mozc key settings"></p>
+<p>VMwareのキーマッピングの設定を変更<br><img src="/ros-app-development-setup/key-mapping.png" alt="" title="key mapping"></p>
+<h3 id="ROSのセットアップ"><a href="#ROSのセットアップ" class="headerlink" title="ROSのセットアップ"></a>ROSのセットアップ</h3><p>ROS Indigo をインストール．基本的には<a href="http://wiki.ros.org/indigo/Installation/Ubuntu" target="_blank" rel="external">wiki</a>をそのまま利用．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install -y chrony</div><div class="line">sudo ntpdate -q ntp.ubuntu.com</div><div class="line">sudo sh -c &apos;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&apos;</div><div class="line">sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net --recv-key 0xB01FA116</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install -y ros-indigo-desktop-full</div><div class="line">sudo rosdep init</div><div class="line">rosdep update</div><div class="line">echo &quot;source /opt/ros/indigo/setup.bash&quot; &gt;&gt; ~/.bashrc</div><div class="line">source ~/.bashrc</div><div class="line">sudo apt-get install -y python-rosinstall</div><div class="line">mkdir -p ~/catkin_ws/src</div><div class="line">cd ~/catkin_ws/src</div><div class="line">catkin_init_workspace</div><div class="line">cd ~/catkin_ws</div><div class="line">catkin_make</div><div class="line">echo &quot;source ~/catkin_ws/devel/setup.bash&quot; &gt;&gt; ~/.bashrc</div></pre></td></tr></table></figure>
+<p>ROSの環境変数を設定．他のマシンでRealSenseを動かしてるので，ちゃんと設定する必要があります．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">echo &quot;export ROS_MASTER_URI=http://192.168.179.15:11311/&quot; &gt;&gt; ~/.bashrc</div><div class="line">echo &quot;export ROS_HOSTNAME=192.168.65.133&quot; &gt;&gt; ~/.bashrc</div><div class="line">source ~/.bashrc</div></pre></td></tr></table></figure>
+<p>上記コマンドの192.168.179.15がroscoreが動いてるマシンのIPアドレス，192.168.65.133が仮想環境に割り当てられているIPアドレスになります．</p>
+<h3 id="共有フォルダ設定"><a href="#共有フォルダ設定" class="headerlink" title="共有フォルダ設定"></a>共有フォルダ設定</h3><p>~/catkin_ws/srcフォルダにOS XからアクセスしてGit使ったりしたかったので，共有フォルダの設定を行いました．自分の環境だと，VMwareの共有フォルダ機能が動作しなかったため，Sambaを使いました．</p>
+<p>Sambaのパスワードを設定しないとOS XのFinderからアクセスできなかったので，以下のコマンドでパスワードを設定．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo smbpasswd -a &lt;ユーザ名&gt;</div></pre></td></tr></table></figure>
+<p>あとは，共有したいフォルダを右クリックしてプロパティから共有の設定する．<br><img src="/ros-app-development-setup/share-dir.png" alt="" title="share"></p>
+<h2 id="CLionセットアップ"><a href="#CLionセットアップ" class="headerlink" title="CLionセットアップ"></a>CLionセットアップ</h2><p>CLionは，使えたら使おっかなーと思ってセットアップしましたが，何も困難なことなく動作しました．catkin_create_pkg で生成したディレクトリをそのまま読み込めば，ビルドもデバッグを可能です．<br>以下は，ブレークポイントを使ったデバッグをしたときの画面です．<br><img src="/ros-app-development-setup/debug.png" alt="" title="debug"></p>
+<h2 id="失敗編"><a href="#失敗編" class="headerlink" title="失敗編"></a>失敗編</h2><p>この節は，セットアップの失敗記録です．</p>
+<h3 id="OS-X-でROS"><a href="#OS-X-でROS" class="headerlink" title="OS X でROS"></a>OS X でROS</h3><p>ビルドの時点でかなり困難でした．なんとかビルドできましたが，実行時にエラーが出たので断念．各パッケージごとのエラーに対処していくのは現実的ではないと判断しました…</p>
+<h3 id="VirtualBoxでUbuntuとROS"><a href="#VirtualBoxでUbuntuとROS" class="headerlink" title="VirtualBoxでUbuntuとROS"></a>VirtualBoxでUbuntuとROS</h3><p>3Dアクセラレーションを有効にするとrvizはエラーが発生し，3Dアクセラレーションを無効にするとrvizが重すぎるので断念しました．</p>
+<h3 id="DockerでUbuntuとROS"><a href="#DockerでUbuntuとROS" class="headerlink" title="DockerでUbuntuとROS"></a>DockerでUbuntuとROS</h3><p>SSHのX11機能を使ってrvizの画面を表示しようとしたが，エラーが出たので断念．</p>
 
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Note/">Note</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Note/確率不等式/">確率不等式</a>
-            </p>
-            <p class="date"><time datetime="2015-11-17T18:02:47.000Z" itemprop="datePublished">2015-11-18</time></p>
         </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/probability-inequalities/">確率不等式(probability inequalities)</a>
-        </h1>
-    
+        <footer class="article-footer">
+            
 
-        <p class="article-excerpt">
-            マルコフの不等式任意の確率変数$x$に対して，$a&gt;0$とすると，$$\mathrm{Pr}(|x| \geq a) \leq \frac{\mathrm{E}(|x|)}{a}$$
-チェビシェフの不等式確率変数$x$が期待値$\mathrm{E}[x]$，分散$\mathrm{V}[x]$をもつとき，任意の実数$\epsilon &gt; 0$に対して，$$\mathrm{Pr}(|x -
-        </p>
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/hello-world/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://fumiaki.xyz/hello-world/">0</span>
-    
-</span>
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/hexo/">hexo</a>
-            </p>
-            <p class="date"><time datetime="2015-11-11T12:16:33.000Z" itemprop="datePublished">2015-11-11</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/hello-world/">Hello World</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            HugoからHexoに変えた
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More info: Server
-Generate static files1$ hexo generate
-More info: Generating
-Deploy to
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
+
     
-        </div>
-    
-
-
-    </div></section>
-
-
+    </section>
 
                         </div>
                     </section>
@@ -272,6 +288,19 @@ Deploy to
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/realsense-robotic-devkit-setup/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Intel の RealSense Robotic Development Kit を買った</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -453,11 +482,13 @@ Deploy to
     var disqus_shortname = 'fumiaki-xyz';
     
     
+    var disqus_url = 'http://fumiaki.xyz/ros-app-development-setup/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
@@ -480,23 +511,6 @@ Deploy to
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
