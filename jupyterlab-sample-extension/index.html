@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8" />
+
+    
+
     
     <title>JupyterLabの拡張機能を作ってみた | fumiaki.xyz</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="jupyterlab" />
     
-    <meta name="description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
-JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
-普段">
+    <meta name="description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです． JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります． 普段">
+<meta name="keywords" content="jupyterlab">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JupyterLabの拡張機能を作ってみた">
 <meta property="og:url" content="http://fumiaki.xyz/jupyterlab-sample-extension/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
-<meta property="og:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
-JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
-普段">
+<meta property="og:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです． JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります． 普段">
+<meta property="og:locale" content="en">
 <meta property="og:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
-<meta property="og:updated_time" content="2016-10-08T16:27:52.000Z">
+<meta property="og:updated_time" content="2018-06-30T13:54:10.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JupyterLabの拡張機能を作ってみた">
-<meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
-JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
-普段">
+<meta name="twitter:description" content="はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです． JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります． 普段">
 <meta name="twitter:image" content="http://fumiaki.xyz/jupyterlab-sample-extension/jupyterlab.png">
     
 
@@ -32,16 +32,19 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
 
     
 
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
-    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
 
     <link rel="stylesheet" href="/css/style.css">
 
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    <script src="/libs/jquery/2.2.4/jquery.min.js"></script>
     
     
-        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
     
     
         <script type="text/javascript">
@@ -56,6 +59,7 @@ ga('send', 'pageview');
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
+
 
 </head>
 
@@ -157,12 +161,19 @@ ga('send', 'pageview');
             </header>
         
         
-            <div class="article-subtitle">
-                <a href="/jupyterlab-sample-extension/" class="article-date">
-    <time datetime="2016-09-19T01:22:35.000Z" itemprop="datePublished">2016-09-19</time>
-</a>
+            <div class="article-meta">
                 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jupyterlab/">jupyterlab</a></li></ul>
+    <div class="article-date">
+        <a href="/jupyterlab-sample-extension/" class="article-date">
+            <time datetime="2016-09-19T01:22:35.000Z" itemprop="datePublished">2016-09-19</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/jupyterlab/">jupyterlab</a>
+    </div>
 
             </div>
         
@@ -173,31 +184,31 @@ ga('send', 'pageview');
 <p>普段は，Jupyter Notebookを使っており，そろそろJupyterLabに乗り換えたいなーと思ってます．</p>
 <h2 id="JupyterLabの拡張機能について"><a href="#JupyterLabの拡張機能について" class="headerlink" title="JupyterLabの拡張機能について"></a>JupyterLabの拡張機能について</h2><p>拡張機能の仕組みは，できてから日が浅いようでドキュメントもほとんどないです．<br>今回は，以下のページを参考にしました．</p>
 <ul>
-<li><a href="https://media.readthedocs.org/pdf/jupyterlab-tutorial/latest/jupyterlab-tutorial.pdf" target="_blank" rel="external">JupyterLab Tutorial Documentation</a> : JupyterLabの一般的なチュートリアル</li>
-<li><a href="https://github.com/jupyter/jupyterlab-extension-builder" target="_blank" rel="external">JupyterLab Extension Builder</a> : JupyterLabの拡張機能を作るツール</li>
-<li><a href="https://github.com/ipython/ipywidgets/tree/1124b3cc1f5509a629b672e925ff017235bf53aa/widgetslabextension" target="_blank" rel="external">Jupyter Widgets JupyterLab Extension</a> : JupyterLabの拡張機能のプロジェクトは，これ以外見当たらなかった</li>
-<li><a href="https://github.com/jupyter/jupyterlab/pull/814" target="_blank" rel="external">Enable Third Party Extensions #814</a> </li>
+<li><a href="https://media.readthedocs.org/pdf/jupyterlab-tutorial/latest/jupyterlab-tutorial.pdf" target="_blank" rel="noopener">JupyterLab Tutorial Documentation</a> : JupyterLabの一般的なチュートリアル</li>
+<li><a href="https://github.com/jupyter/jupyterlab-extension-builder" target="_blank" rel="noopener">JupyterLab Extension Builder</a> : JupyterLabの拡張機能を作るツール</li>
+<li><a href="https://github.com/ipython/ipywidgets/tree/1124b3cc1f5509a629b672e925ff017235bf53aa/widgetslabextension" target="_blank" rel="noopener">Jupyter Widgets JupyterLab Extension</a> : JupyterLabの拡張機能のプロジェクトは，これ以外見当たらなかった</li>
+<li><a href="https://github.com/jupyter/jupyterlab/pull/814" target="_blank" rel="noopener">Enable Third Party Extensions #814</a> </li>
 </ul>
-<h2 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h2><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="external">samplelabextension</a>という名前で作ります．</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> samplelabextension</div><div class="line"><span class="built_in">cd</span> samplelabextension</div><div class="line">npm init</div></pre></td></tr></table></figure>
+<h2 id="拡張機能作成の全体の流れ"><a href="#拡張機能作成の全体の流れ" class="headerlink" title="拡張機能作成の全体の流れ"></a>拡張機能作成の全体の流れ</h2><p>まずは，拡張機能のプロジェクトディレクトリを作ります．今回は，<a href="https://github.com/tokuhisa/samplelabextension" target="_blank" rel="noopener">samplelabextension</a>という名前で作ります．</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> samplelabextension</span><br><span class="line"><span class="built_in">cd</span> samplelabextension</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 <p>プロジェクトに必要なライブラリをインストール</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> <span class="comment">--save jupyterlab</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save phosphor</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev jupyterlab-extension-builder</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev rimraf</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typedoc</span></div><div class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typescript</span></div></pre></td></tr></table></figure>
-<p>次に，<a href="https://github.com/tokuhisa/samplelabextension/tree/master/src" target="_blank" rel="external">samplelabextension/src</a> ディレクトリ下に拡張機能のスクリプトを書きます．<br>今回は，独自のhtmlを表示する拡張機能とし，typescriptで書きました．</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> <span class="comment">--save jupyterlab</span></span><br><span class="line">npm <span class="keyword">install</span> <span class="comment">--save phosphor</span></span><br><span class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev jupyterlab-extension-builder</span></span><br><span class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev rimraf</span></span><br><span class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typedoc</span></span><br><span class="line">npm <span class="keyword">install</span> <span class="comment">--save-dev typescript</span></span><br></pre></td></tr></table></figure>
+<p>次に，<a href="https://github.com/tokuhisa/samplelabextension/tree/master/src" target="_blank" rel="noopener">samplelabextension/src</a> ディレクトリ下に拡張機能のスクリプトを書きます．<br>今回は，独自のhtmlを表示する拡張機能とし，typescriptで書きました．</p>
 <ul>
-<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/tsconfig.json" target="_blank" rel="external">samplelabextension/src/tsconfig.json</a> : typescriptの設定</li>
-<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/plugin.ts" target="_blank" rel="external">samplelabextension/src/plugin.ts</a> : 拡張機能のエントリーポイントとなるスクリプト</li>
-<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/html.ts" target="_blank" rel="external">samplelabextension/src/html.ts</a> : 表示するhtml</li>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/tsconfig.json" target="_blank" rel="noopener">samplelabextension/src/tsconfig.json</a> : typescriptの設定</li>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/plugin.ts" target="_blank" rel="noopener">samplelabextension/src/plugin.ts</a> : 拡張機能のエントリーポイントとなるスクリプト</li>
+<li><a href="https://github.com/tokuhisa/samplelabextension/blob/master/src/html.ts" target="_blank" rel="noopener">samplelabextension/src/html.ts</a> : 表示するhtml</li>
 </ul>
 <p>このスクリプトは後でjavascriptに変換して samplelabextension/lib ディレクトリ下に保存されます．</p>
-<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/scripts/buildExtension.js" target="_blank" rel="external">samplelabextension/scripts/buildExtension.js</a> を使って， 拡張機能のスクリプトをビルドします．</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">var buildExtension = require(&apos;jupyterlab-extension-builder&apos;).buildExtension;</div><div class="line"></div><div class="line">buildExtension(&#123;</div><div class="line">  name: &apos;samplelabextension&apos;,</div><div class="line">  entry: &apos;./lib/plugin&apos;,</div><div class="line">  outputDir : &apos;./samplelabextension/static&apos;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>あとは，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/package.json" target="_blank" rel="external">package.json</a>のscriptsに色々書いたり，</p>
-<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"clean"</span>: <span class="string">"rimraf docs &amp;&amp; rimraf lib &amp;&amp; rimraf samplelabextension/static"</span>,</div><div class="line">    <span class="string">"build:src"</span>: <span class="string">"tsc --project src"</span>,</div><div class="line">    <span class="string">"build:extension"</span>: <span class="string">"node scripts/buildExtension.js"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"npm run build:src &amp;&amp; npm run build:extension"</span>,</div><div class="line">    <span class="string">"example:browser"</span>: <span class="string">"cd examples/browser &amp;&amp; npm run update &amp;&amp; npm run build"</span>,</div><div class="line">    <span class="string">"example:node"</span>: <span class="string">"cd examples/node &amp;&amp; npm install"</span>,</div><div class="line">    <span class="string">"build:examples"</span>: <span class="string">"npm run example:browser &amp;&amp; npm run example:node"</span>,</div><div class="line">    <span class="string">"docs"</span>: <span class="string">"typedoc --mode file --module commonjs --excludeNotExported --target es5 --moduleResolution node --out docs/ src"</span>,</div><div class="line">    <span class="string">"prepublish"</span>: <span class="string">"npm run build"</span></div><div class="line">  &#125;,</div></pre></td></tr></table></figure>
-<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/setup.py" target="_blank" rel="external">setup.py</a>に色々書いたり，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/MANIFEST.in" target="_blank" rel="external">MANIFEST.in</a>を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/__init__.py" target="_blank" rel="external">samplelabextension/samplelabextension/__init__.py</a> を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/_version.py" target="_blank" rel="external">samplelabextension/samplelabextension/_version.py</a> を書いたりすれば終わりです．</p>
+<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/scripts/buildExtension.js" target="_blank" rel="noopener">samplelabextension/scripts/buildExtension.js</a> を使って， 拡張機能のスクリプトをビルドします．</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var path = require(&apos;path&apos;);</span><br><span class="line"></span><br><span class="line">var buildExtension = require(&apos;jupyterlab-extension-builder&apos;).buildExtension;</span><br><span class="line"></span><br><span class="line">buildExtension(&#123;</span><br><span class="line">  name: &apos;samplelabextension&apos;,</span><br><span class="line">  entry: &apos;./lib/plugin&apos;,</span><br><span class="line">  outputDir : &apos;./samplelabextension/static&apos;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>あとは，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/package.json" target="_blank" rel="noopener">package.json</a>のscriptsに色々書いたり，</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"clean"</span>: <span class="string">"rimraf docs &amp;&amp; rimraf lib &amp;&amp; rimraf samplelabextension/static"</span>,</span><br><span class="line">    <span class="string">"build:src"</span>: <span class="string">"tsc --project src"</span>,</span><br><span class="line">    <span class="string">"build:extension"</span>: <span class="string">"node scripts/buildExtension.js"</span>,</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"npm run build:src &amp;&amp; npm run build:extension"</span>,</span><br><span class="line">    <span class="string">"example:browser"</span>: <span class="string">"cd examples/browser &amp;&amp; npm run update &amp;&amp; npm run build"</span>,</span><br><span class="line">    <span class="string">"example:node"</span>: <span class="string">"cd examples/node &amp;&amp; npm install"</span>,</span><br><span class="line">    <span class="string">"build:examples"</span>: <span class="string">"npm run example:browser &amp;&amp; npm run example:node"</span>,</span><br><span class="line">    <span class="string">"docs"</span>: <span class="string">"typedoc --mode file --module commonjs --excludeNotExported --target es5 --moduleResolution node --out docs/ src"</span>,</span><br><span class="line">    <span class="string">"prepublish"</span>: <span class="string">"npm run build"</span></span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<p><a href="https://github.com/tokuhisa/samplelabextension/blob/master/setup.py" target="_blank" rel="noopener">setup.py</a>に色々書いたり，<a href="https://github.com/tokuhisa/samplelabextension/blob/master/MANIFEST.in" target="_blank" rel="noopener">MANIFEST.in</a>を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/__init__.py" target="_blank" rel="noopener">samplelabextension/samplelabextension/__init__.py</a> を書いたり，<br><a href="https://github.com/tokuhisa/samplelabextension/blob/master/samplelabextension/_version.py" target="_blank" rel="noopener">samplelabextension/samplelabextension/_version.py</a> を書いたりすれば終わりです．</p>
 <p>ビルドして，</p>
-<figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="built_in">run</span> build</div><div class="line">python <span class="built_in">setup</span>.py install</div></pre></td></tr></table></figure>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">run</span><span class="bash"> build</span></span><br><span class="line"><span class="bash">python setup.py install</span></span><br></pre></td></tr></table></figure>
 <p>拡張機能としてインストールすれば，使えるようになります．</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">jupyter labextension <span class="keyword">install</span> <span class="comment">--py samplelabextension</span></div><div class="line">jupyter labextension <span class="keyword">enable</span> samplelabextension <span class="comment">--py</span></div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jupyter labextension <span class="keyword">install</span> <span class="comment">--py samplelabextension</span></span><br><span class="line">jupyter labextension <span class="keyword">enable</span> samplelabextension <span class="comment">--py</span></span><br></pre></td></tr></table></figure>
 <p>JupyterLabを起動すれば，新たなCommandsが追加され，独自のhtmlを表示できています．<br><img src="/jupyterlab-sample-extension/samplelabextension.png" alt="" title="samplelabextension"></p>
 
         </div>
@@ -205,59 +216,66 @@ ga('send', 'pageview');
             
 
 
-    <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
-    <span class="a2a_divider"></span>
-    <a class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-    <a class="a2a_button_tumblr"></a>
-</div>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<style>
-    .a2a_menu {
-        border-radius: 4px;
-    }
-    .a2a_menu a {
-        margin: 2px 0;
-        font-size: 14px;
-        line-height: 16px;
-        border-radius: 4px;
-        color: inherit !important;
-        font-family: 'Microsoft Yahei';
-    }
-    #a2apage_dropdown {
-        margin: 10px 0;
-    }
-    .a2a_mini_services {
-        padding: 10px;
-    }
-    a.a2a_i,
-    i.a2a_i {
-        width: 122px;
-        line-height: 16px;
-    }
-    a.a2a_i .a2a_svg,
-    a.a2a_more .a2a_svg {
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        vertical-align: top;
-        background-size: 16px;
-    }
-    a.a2a_i {
-        border: none !important;
-    }
-    a.a2a_menu_show_more_less {
-        margin: 0;
-        padding: 10px 0;
-        line-height: 16px;
-    }
-    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-    .a2a_mini_services{*+height:1%;}
-</style>
 
+    <a data-url="http://fumiaki.xyz/jupyterlab-sample-extension/" data-id="cjj1kg2p20002hwup13vxe2tw" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
 
         </footer>
     </div>
@@ -273,6 +291,7 @@ ga('send', 'pageview');
     
     </section>
 
+
                         </div>
                     </section>
                     <aside id="sidebar">
@@ -283,7 +302,7 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/tokuhisa_f" target="_blank">
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/tokuhisa_f" target="_blank" rel="noopener">
                         <i class="icon fa fa-twitter"></i>
                     </a>
                 </li>
@@ -291,7 +310,7 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/tokuhisa" target="_blank">
+                    <a class="social-tooltip" title="github" href="https://github.com/tokuhisa" target="_blank" rel="noopener">
                         <i class="icon fa fa-github"></i>
                     </a>
                 </li>
@@ -325,6 +344,9 @@ ga('send', 'pageview');
     
     <div class="widgets-container">
         
+            
+                
+
             
                 
     <div class="widget-wrap">
@@ -480,6 +502,7 @@ ga('send', 'pageview');
         
     </div>
 </aside>
+
                 </div>
             </div>
         </div>
@@ -494,9 +517,16 @@ ga('send', 'pageview');
                 <p>&copy; 2018 Tokuhisa, Fumiaki</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
         </div>
     </div>
 </footer>
+
         
     
     <script>
@@ -516,22 +546,45 @@ ga('send', 'pageview');
 
 
 
+
     
-        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
-        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
     
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
 
 
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"Tex":{"Macros":{"argmax":"\\operatorname*{argmax}"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
