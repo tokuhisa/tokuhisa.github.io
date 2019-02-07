@@ -6,17 +6,26 @@
     
 
     
-    <title>Tag: 料理 | fumiaki.xyz</title>
+    <title>チャットボット開発 その２ データの埋め込み・取得・保存 | fumiaki.xyz</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="fumiaki.xyz">
-<meta property="og:url" content="http://fumiaki.xyz/tags/料理/index.html">
+        <meta name="keywords" content="Chatbot" />
+    
+    <meta name="description" content="はじめに今回は、Azure Bot Service での実行ファイルへのデータの埋め込み・外部サーバーからのデータの取得・データの保存の記事です。 実行環境の調査がメインですが、ボットに「ニュース教えて」と言うとランダムにニュース記事のタイトルとURLを返す機能が付きました。 リソースの埋め込みアプリケーション リソースの管理 (.NET) 上記ページの方法では、単純な文字列については良いのですが">
+<meta name="keywords" content="Chatbot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="チャットボット開発 その２ データの埋め込み・取得・保存">
+<meta property="og:url" content="http://fumiaki.xyz/chatbot-development-002/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
+<meta property="og:description" content="はじめに今回は、Azure Bot Service での実行ファイルへのデータの埋め込み・外部サーバーからのデータの取得・データの保存の記事です。 実行環境の調査がメインですが、ボットに「ニュース教えて」と言うとランダムにニュース記事のタイトルとURLを返す機能が付きました。 リソースの埋め込みアプリケーション リソースの管理 (.NET) 上記ページの方法では、単純な文字列については良いのですが">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://fumiaki.xyz/chatbot-development-002/bot-news.png">
+<meta property="og:updated_time" content="2019-02-07T15:40:37.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fumiaki.xyz">
+<meta name="twitter:title" content="チャットボット開発 その２ データの埋め込み・取得・保存">
+<meta name="twitter:description" content="はじめに今回は、Azure Bot Service での実行ファイルへのデータの埋め込み・外部サーバーからのデータの取得・データの保存の記事です。 実行環境の調査がメインですが、ボットに「ニュース教えて」と言うとランダムにニュース記事のタイトルとURLを返す機能が付きました。 リソースの埋め込みアプリケーション リソースの管理 (.NET) 上記ページの方法では、単純な文字列については良いのですが">
+<meta name="twitter:image" content="http://fumiaki.xyz/chatbot-development-002/bot-news.png">
     
 
     
@@ -134,74 +143,138 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-tag"></i>Tag: <em>料理</em>
+    <a class="page-title-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Diary/Chatbot/">Chatbot</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-chatbot-development-002" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/namerou-and-sanga-yaki/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/namerou-and-sanga-yaki/sanga-yaki.png)" alt="なめろうとさんが焼きを作った" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://fumiaki.xyz/namerou-and-sanga-yaki/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/料理/">料理</a>
-            </div>
-            <div class="date"><time datetime="2016-09-19T12:37:09.000Z" itemprop="datePublished">2016-09-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/namerou-and-sanga-yaki/">なめろうとさんが焼きを作った</a>
+        チャットボット開発 その２ データの埋め込み・取得・保存
         </h1>
     
 
-        <p class="article-excerpt">
-            はじめにスーパーで刺身を買ってきて，なめろうとさんが焼きを作りました．作業時間は30分くらいでした．
-材料123456789101112なめろうの材料:  - 刺身：今回は，まぐろとサーモンとイカ  - 刺身のつまとけん：大根，人参，きゅうり  - 大葉  - 小ねぎ  - ごま  - にんにく醤油につけてたにんにく  - ゆずの村  - 味噌：今回は八丁味噌(家にこれしかなかった)使ったけど，ち
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/chatbot-development-002/" class="article-date">
+            <time datetime="2019-02-04T13:40:00.000Z" itemprop="datePublished">2019-02-04</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Chatbot/">Chatbot</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>今回は、Azure Bot Service での実行ファイルへのデータの埋め込み・外部サーバーからのデータの取得・データの保存の記事です。</p>
+<p>実行環境の調査がメインですが、ボットに「ニュース教えて」と言うとランダムにニュース記事のタイトルとURLを返す機能が付きました。</p>
+<h2 id="リソースの埋め込み"><a href="#リソースの埋め込み" class="headerlink" title="リソースの埋め込み"></a>リソースの埋め込み</h2><p><a href="https://docs.microsoft.com/ja-jp/visualstudio/ide/managing-application-resources-dotnet?view=vs-2017" target="_blank" rel="noopener">アプリケーション リソースの管理 (.NET)</a></p>
+<p>上記ページの方法では、単純な文字列については良いのですが、ファイルはリンクのみで埋め込みはできませんでした。ローカルではリンクのみでも問題ありませんでしたが、Bot Service にデプロイするとファイルを読み込めなくなったので下記の方法に変更しました。</p>
+<p><a href="https://docs.microsoft.com/ja-jp/visualstudio/ide/build-actions?view=vs-2017" target="_blank" rel="noopener">ビルド アクション</a></p>
+<p>上記ページの「埋め込みリソース」でファイルを埋め込んで読み込みができました。<br>これで、正規表現の一覧を入れたファイルを読み込み、ユーザーからの問いかけを正規表現のマッチで分類しています。</p>
+<h2 id="RSSフィードの取得"><a href="#RSSフィードの取得" class="headerlink" title="RSSフィードの取得"></a>RSSフィードの取得</h2><p><a href="https://docs.microsoft.com/ja-jp/dotnet/api/system.net.http.httpclient?view=netframework-4.7.2" target="_blank" rel="noopener">HttpClient Class</a></p>
+<p>上記のHttpClientを使ってRSSフィードの取得を行いました。</p>
+<p><a href="https://docs.microsoft.com/ja-jp/azure/architecture/antipatterns/improper-instantiation/" target="_blank" rel="noopener">不適切なインスタンス化のアンチパターン</a></p>
+<p>HttpClientは便利ですが、上記ページによると取り扱いに気を付けないといけないようです。</p>
+<p><a href="https://www.nuget.org/packages/Microsoft.SyndicationFeed.ReaderWriter/" target="_blank" rel="noopener">Microsoft.SyndicationFeed.ReaderWriter</a></p>
+<p>RSSの読み込みと解析は上記のライブラリを使用しました。</p>
+<p>以下は、ボットがYahooニュースのRSSから取得したデータで返答している例です。</p>
+<p><img src="/chatbot-development-002/bot-news.png" alt="" title="ニュース"></p>
+<h2 id="データの保存"><a href="#データの保存" class="headerlink" title="データの保存"></a>データの保存</h2><p><a href="https://docs.microsoft.com/ja-jp/azure/bot-service/bot-builder-howto-v4-storage?view=azure-bot-service-4.0&amp;tabs=csharp" target="_blank" rel="noopener">ストレージに直接書き込む</a></p>
+<p>上記ページの通りにやれば、「各対話ごとに管理したいデータ」「対話間で共通でもつデータ」のどちらもストレージに保存できるようになりました。今回は、Blob Storage で各対話の状態の保存・読み込み、RSSの保存・読み込みを行いました。</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://fumiaki.xyz/chatbot-development-002/" data-id="cjrusdo7h0000mcupudurg5qx" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -230,6 +303,19 @@ ga('send', 'pageview');
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/chatbot-development-001/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">チャットボット開発 その１ 環境構築</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -422,11 +508,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'fumiaki-xyz';
     
     
+    var disqus_url = 'http://fumiaki.xyz/chatbot-development-002/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
@@ -455,6 +543,23 @@ ga('send', 'pageview');
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"Tex":{"Macros":{"argmax":"\\operatorname*{argmax}"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
