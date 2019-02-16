@@ -6,17 +6,26 @@
     
 
     
-    <title>Category: jupyterlab | fumiaki.xyz</title>
+    <title>チャットボット開発 その３ 最初の試作 | fumiaki.xyz</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="fumiaki.xyz">
-<meta property="og:url" content="http://fumiaki.xyz/categories/Diary/jupyterlab/index.html">
+        <meta name="keywords" content="Chatbot" />
+    
+    <meta name="description" content="はじめに前回までは、主に Azure Bot Service 上でできることの調査でした。 今回は、とりあえず作るものを決めます。以下の項目を満たすものにしたいと思います。  完璧を目指すと難しいが、それっぽい結果を出すだけなら簡単なもの 作る過程で得られたものが再利用性が高いアセットになるもの  チャットボット開発の小話12345678三連休の最終日の日曜、午前9時過ぎ。F氏は趣味で作っているチ">
+<meta name="keywords" content="Chatbot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="チャットボット開発 その３ 最初の試作">
+<meta property="og:url" content="http://fumiaki.xyz/chatbot-development-003/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
+<meta property="og:description" content="はじめに前回までは、主に Azure Bot Service 上でできることの調査でした。 今回は、とりあえず作るものを決めます。以下の項目を満たすものにしたいと思います。  完璧を目指すと難しいが、それっぽい結果を出すだけなら簡単なもの 作る過程で得られたものが再利用性が高いアセットになるもの  チャットボット開発の小話12345678三連休の最終日の日曜、午前9時過ぎ。F氏は趣味で作っているチ">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://fumiaki.xyz/chatbot-development-003/chatbot-dev-story.png">
+<meta property="og:updated_time" content="2019-02-16T17:15:48.677Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="fumiaki.xyz">
+<meta name="twitter:title" content="チャットボット開発 その３ 最初の試作">
+<meta name="twitter:description" content="はじめに前回までは、主に Azure Bot Service 上でできることの調査でした。 今回は、とりあえず作るものを決めます。以下の項目を満たすものにしたいと思います。  完璧を目指すと難しいが、それっぽい結果を出すだけなら簡単なもの 作る過程で得られたものが再利用性が高いアセットになるもの  チャットボット開発の小話12345678三連休の最終日の日曜、午前9時過ぎ。F氏は趣味で作っているチ">
+<meta name="twitter:image" content="http://fumiaki.xyz/chatbot-development-003/chatbot-dev-story.png">
     
 
     
@@ -134,76 +143,148 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">jupyterlab</em>
+    <a class="page-title-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Diary/Chatbot/">Chatbot</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-chatbot-development-003" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/jupyterlab-sample-extension/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/jupyterlab-sample-extension/jupyterlab.png)" alt="JupyterLabの拡張機能を作ってみた" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://fumiaki.xyz/jupyterlab-sample-extension/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/jupyterlab/">jupyterlab</a>
-            </div>
-            <div class="date"><time datetime="2016-09-19T01:22:35.000Z" itemprop="datePublished">2016-09-19</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/jupyterlab-sample-extension/">JupyterLabの拡張機能を作ってみた</a>
+        チャットボット開発 その３ 最初の試作
         </h1>
     
 
-        <p class="article-excerpt">
-            はじめにJupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．まだ安定版ではないようなので，この記事の内容は今後不正確になる可能性が高いです．
-JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張したものです．Jupyter Notebookとの違いとしては，以下のような画面の分割機能やタブ機能があります．
-普段
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/chatbot-development-003/" class="article-date">
+            <time datetime="2019-02-16T16:10:00.000Z" itemprop="datePublished">2019-02-17</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Chatbot/">Chatbot</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>前回までは、主に Azure Bot Service 上でできることの調査でした。</p>
+<p>今回は、とりあえず作るものを決めます。以下の項目を満たすものにしたいと思います。</p>
+<ul>
+<li>完璧を目指すと難しいが、それっぽい結果を出すだけなら簡単なもの</li>
+<li>作る過程で得られたものが再利用性が高いアセットになるもの</li>
+</ul>
+<h2 id="チャットボット開発の小話"><a href="#チャットボット開発の小話" class="headerlink" title="チャットボット開発の小話"></a>チャットボット開発の小話</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">三連休の最終日の日曜、午前<span class="number">9</span>時過ぎ。</span><br><span class="line">F氏は趣味で作っているチャットボットにどんな機能を実装するか悩んでいた。</span><br><span class="line">「うーん、ニュースを毎日教えてくれたら便利かな～。エンタメ系の機能なら俳句を詠むと面白いかも。」</span><br><span class="line">「ただ、どれも世の中に既に良いものがあるんだよな。」</span><br><span class="line">いつまでも良いアイデアが浮かばないことに焦っていた。</span><br><span class="line">一度思考をリセットしようと朝食を食べつつテレビを見ていると、ハッと閃いた。</span><br><span class="line">「そうだ！合体すればいいんだ。」</span><br><span class="line">こうしてニュースを<span class="number">575</span>の文章にするチャットボットができたのだった。</span><br></pre></td></tr></table></figure>
+<p>これは半分冗談なんですが、まあこれくらい何を作ろうか悩みました。</p>
+<p>悩んだ結果、物語の生成に興味があったので、こんな小話を生成するボットができたら面白いなと思いつきました。（ボットである必要性は微妙ですが……）</p>
+<h2 id="小話生成ボット試作"><a href="#小話生成ボット試作" class="headerlink" title="小話生成ボット試作"></a>小話生成ボット試作</h2><p>試しに作った小話を生成するボットがこちらです。</p>
+<p><img src="/chatbot-development-003/chatbot-dev-story.png" alt="" title="ストーリー"></p>
+<p>やっていることは、テンプレートの文章に対して、キーワードを埋め込んでいるだけです。キーワードは「ニュース」や「ダジャレ」の部分が11種類あって、それらから組み合わせ可能なものを選んでくるという処理をしています。なるだけローコストで作れるように工夫はしましたが、それでもものすごく作りこみをしているので、たくさん作ることはできません。</p>
+<p>当面は、もっと簡単な小話を量産できるものにしていこうと思います。</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <div>
+    <div style="display: inline-block; vertical-align: top; padding-top: 2px;">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="チャットボット開発 その３ 最初の試作" data-url="http://fumiaki.xyz/chatbot-development-003/" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+&ensp;
+    <div style="display: inline-block; vertical-align: top;">
+        <div id="fb-root"></div>
+        <script async defer src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2"></script>
+        <div class="fb-share-button" data-href="http://fumiaki.xyz/chatbot-development-003/" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
+    </div>
+</div>
+
+<a data-url="http://fumiaki.xyz/chatbot-development-003/" data-id="cjs7osvty0000n8upvdqylb4i" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
+
+    <section id="comments">
     
-        </div>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
     
-
-
-    </div></section>
-
-
+    </section>
 
 
                         </div>
@@ -232,6 +313,19 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/chatbot-development-002/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">チャットボット開発 その２ データの埋め込み・取得・保存</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -424,11 +518,13 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
     var disqus_shortname = 'fumiaki-xyz';
     
     
+    var disqus_url = 'http://fumiaki.xyz/chatbot-development-003/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
@@ -457,6 +553,23 @@ JupyterLabについてJupyterLabは，Jupyter Notebookをベースに拡張し�
 <!-- Custom Scripts -->
 <script src="/js/main.js"></script>
 
-    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"Tex":{"Macros":{"argmax":"\\operatorname*{argmax}"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
