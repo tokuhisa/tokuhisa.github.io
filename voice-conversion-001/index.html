@@ -10,19 +10,22 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
+        <meta name="keywords" content="MachineLearning" />
     
-    <meta name="description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。詳細は後日書きます。 結果結果は以下のようになりました。当初の目標ほどではないですが、声質は変わってます。 変換前（上）と変換後（下）">
+    <meta name="description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。目標の性能には至りませんでしたが、GWが終わるので一旦打ち切って現状を記します。 2019/05/05 公開2019/05/07 加筆・修正しました  目的と方法声質変換は、音声の話者情報を変換する技術です。例えば、Aさんが喋った音声をあたかもBさんが喋った音声のように変換することができます。 今回は、自分の">
+<meta name="keywords" content="MachineLearning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="声質変換に挑戦">
 <meta property="og:url" content="http://fumiaki.xyz/voice-conversion-001/index.html">
 <meta property="og:site_name" content="fumiaki.xyz">
-<meta property="og:description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。詳細は後日書きます。 結果結果は以下のようになりました。当初の目標ほどではないですが、声質は変わってます。 変換前（上）と変換後（下）">
+<meta property="og:description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。目標の性能には至りませんでしたが、GWが終わるので一旦打ち切って現状を記します。 2019/05/05 公開2019/05/07 加筆・修正しました  目的と方法声質変換は、音声の話者情報を変換する技術です。例えば、Aさんが喋った音声をあたかもBさんが喋った音声のように変換することができます。 今回は、自分の">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-05-05T11:39:56.547Z">
+<meta property="og:image" content="http://fumiaki.xyz/voice-conversion-001/thumbnail.png">
+<meta property="og:updated_time" content="2019-05-06T23:39:20.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="声質変換に挑戦">
-<meta name="twitter:description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。詳細は後日書きます。 結果結果は以下のようになりました。当初の目標ほどではないですが、声質は変わってます。 変換前（上）と変換後（下）">
+<meta name="twitter:description" content="はじめにGWの連休を利用して、声質変換(voice conversion)に挑戦しました。目標の性能には至りませんでしたが、GWが終わるので一旦打ち切って現状を記します。 2019/05/05 公開2019/05/07 加筆・修正しました  目的と方法声質変換は、音声の話者情報を変換する技術です。例えば、Aさんが喋った音声をあたかもBさんが喋った音声のように変換することができます。 今回は、自分の">
+<meta name="twitter:image" content="http://fumiaki.xyz/voice-conversion-001/thumbnail.png">
     
 
     
@@ -81,7 +84,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/">Diary</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Chatbot/">Chatbot</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Cooking/">Cooking</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/ROS/">ROS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/RealSense/">RealSense</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Representation/">Representation</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/">Diary</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Chatbot/">Chatbot</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Cooking/">Cooking</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/MachineLearning/">MachineLearning</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/ROS/">ROS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/RealSense/">RealSense</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/Representation/">Representation</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/hexo/">hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item" >
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -140,7 +143,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    uncategorized
+    <a class="page-title-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Diary/MachineLearning/">MachineLearning</a>
     </h1>
 </div>
                         <div class="main-body-content">
@@ -167,16 +170,32 @@ ga('send', 'pageview');
     </div>
 
                 
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/MachineLearning/">MachineLearning</a>
+    </div>
+
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>GWの連休を利用して、声質変換(voice conversion)に挑戦しました。<br>詳細は後日書きます。</p>
-<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><p>結果は以下のようになりました。当初の目標ほどではないですが、声質は変わってます。</p>
-<p>変換前（上）と変換後（下）</p>
-<p><audio src="/voice-conversion-001/hello_vc_16k.wav" controls></audio></p>
-<audio src="/voice-conversion-001/hello_vc_16k_conversion.wav" controls>
-</audio>
+            <h2 id="はじめに"><a href="#はじめに" class="headerlink" title="はじめに"></a>はじめに</h2><p>GWの連休を利用して、声質変換(voice conversion)に挑戦しました。<br>目標の性能には至りませんでしたが、GWが終わるので一旦打ち切って現状を記します。</p>
+<p style="font-size:small"><br>2019/05/05 公開<br>2019/05/07 加筆・修正しました<br></p>
+
+<h2 id="目的と方法"><a href="#目的と方法" class="headerlink" title="目的と方法"></a>目的と方法</h2><p>声質変換は、音声の話者情報を変換する技術です。例えば、Aさんが喋った音声をあたかもBさんが喋った音声のように変換することができます。</p>
+<p>今回は、<strong>自分の音声</strong>を下記の<strong>女性の音声</strong>に変換することに挑戦します。目標は、変換した音声にその女性の音声らしさを感じられるレベルです。</p>
+<p>変換先の音声：<a href="https://voice-statistics.github.io/" target="_blank" rel="noopener">声優統計コーパスの藤東知夏様の音声</a></p>
+<p>自分の技術的な興味から CycleGAN を使用した声質変換を行うことにしました。<br>CycleGAN による声質変換は既存の研究がありますが、今回は技術的な理解を深めることも兼ねているので、既存の研究の技術を少しずつ取り入れながら作っていきます。</p>
+<h2 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h2><p>GW終了時点での結果は以下のようになりました。残念ながら目標の性能には至りませんでした。自分の声とは感じないですが、変換先の話者の音声とは思いづらい音声になりました。</p>
+<p>変換前（自分の声）</p>
+<audio src="/voice-conversion-001/hello_vc.wav" controls></audio> 
+
+<p>変換後（音質が悪いので注意）</p>
+<audio src="/voice-conversion-001/hello_vc_transformed.wav" controls></audio> 
+
+<h2 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h2><p>結果はイマイチでしたが、先人の成果を参考に試行錯誤したので、とても勉強になりました。</p>
+<p>次に挑戦する際は、自分の音声の収録環境（なぜかフェードインして収録される…）の改善や未使用の技術を使い性能向上を目指します。</p>
+
         </div>
         <footer class="article-footer">
             
@@ -329,7 +348,7 @@ ga('send', 'pageview');
                             <a href="/voice-conversion-001/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(/voice-conversion-001/thumbnail.png)" alt="声質変換に挑戦" class="thumbnail-image"></span>
     
     
 </a>
@@ -337,7 +356,7 @@ ga('send', 'pageview');
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/Diary/">Diary</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Diary/MachineLearning/">MachineLearning</a></p>
                             <p class="item-title"><a href="/voice-conversion-001/" class="title">声質変換に挑戦</a></p>
                             <p class="item-date"><time datetime="2019-05-05T10:50:53.000Z" itemprop="datePublished">2019-05-05</time></p>
                         </div>
@@ -432,7 +451,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">9</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Chatbot/">Chatbot</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Cooking/">Cooking</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/ROS/">ROS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/RealSense/">RealSense</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Representation/">Representation</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Chatbot/">Chatbot</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Cooking/">Cooking</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/MachineLearning/">MachineLearning</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/ROS/">ROS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/RealSense/">RealSense</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/Representation/">Representation</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/jupyterlab/">jupyterlab</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -452,7 +471,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chatbot/">Chatbot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cooking/">Cooking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ROS/">ROS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RealSense/">RealSense</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Representation/">Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyterlab/">jupyterlab</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Chatbot/">Chatbot</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cooking/">Cooking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MachineLearning/">MachineLearning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ROS/">ROS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RealSense/">RealSense</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Representation/">Representation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jupyterlab/">jupyterlab</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -462,7 +481,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Chatbot/" style="font-size: 20px;">Chatbot</a> <a href="/tags/Cooking/" style="font-size: 10px;">Cooking</a> <a href="/tags/ROS/" style="font-size: 10px;">ROS</a> <a href="/tags/RealSense/" style="font-size: 10px;">RealSense</a> <a href="/tags/Representation/" style="font-size: 10px;">Representation</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyterlab/" style="font-size: 10px;">jupyterlab</a>
+            <a href="/tags/Chatbot/" style="font-size: 20px;">Chatbot</a> <a href="/tags/Cooking/" style="font-size: 10px;">Cooking</a> <a href="/tags/MachineLearning/" style="font-size: 10px;">MachineLearning</a> <a href="/tags/ROS/" style="font-size: 10px;">ROS</a> <a href="/tags/RealSense/" style="font-size: 10px;">RealSense</a> <a href="/tags/Representation/" style="font-size: 10px;">Representation</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jupyterlab/" style="font-size: 10px;">jupyterlab</a>
         </div>
     </div>
 
