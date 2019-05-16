@@ -8,11 +8,28 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 06 May 2019 23:39:20 GMT</pubDate>
+    <pubDate>Thu, 16 May 2019 13:29:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>声質変換に挑戦</title>
+      <title>声質変換に挑戦　#2</title>
+      <link>http://fumiaki.xyz/voice-conversion-002/</link>
+      <guid>http://fumiaki.xyz/voice-conversion-002/</guid>
+      <pubDate>Thu, 16 May 2019 13:18:55 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;前回の続きです。新しいマイクを買ったので、それで収録した音声を世の中で公開されているCycleGANベースの実装で声質変換を
+        
+      
+      </description>
+      
+      <comments>http://fumiaki.xyz/voice-conversion-002/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>声質変換に挑戦　#1</title>
       <link>http://fumiaki.xyz/voice-conversion-001/</link>
       <guid>http://fumiaki.xyz/voice-conversion-001/</guid>
       <pubDate>Sun, 05 May 2019 10:50:53 GMT</pubDate>
@@ -169,24 +186,6 @@
       </description>
       
       <comments>http://fumiaki.xyz/jupyterlab-sample-extension/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>http://fumiaki.xyz/hello-world/</link>
-      <guid>http://fumiaki.xyz/hello-world/</guid>
-      <pubDate>Wed, 11 Nov 2015 12:16:33 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;HugoからHexoに変えた&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-
-        
-      
-      </description>
-      
-      <comments>http://fumiaki.xyz/hello-world/#disqus_thread</comments>
     </item>
     
   </channel>
