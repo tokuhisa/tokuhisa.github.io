@@ -8,8 +8,25 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 30 Dec 2019 12:58:32 GMT</pubDate>
+    <pubDate>Mon, 30 Dec 2019 23:07:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Deep Learningでオタクグッズ・ムービーメーカーAI + C97宣伝③</title>
+      <link>https://fumiaki.xyz/c97-003/</link>
+      <guid>https://fumiaki.xyz/c97-003/</guid>
+      <pubDate>Mon, 30 Dec 2019 23:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;Deep Learningを使ってオタクグッズ・ムービーメーカーAIというものを作りました！これは、自分が昔からたまに作って
+        
+      
+      </description>
+      
+      <comments>https://fumiaki.xyz/c97-003/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>写真から等身大パネルの3Dオブジェクトを簡単に作ってAR + C97宣伝②</title>
@@ -168,23 +185,6 @@
       </description>
       
       <comments>https://fumiaki.xyz/ros-app-development-setup/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Intel の RealSense Robotic Development Kit を買った</title>
-      <link>https://fumiaki.xyz/realsense-robotic-devkit-setup/</link>
-      <guid>https://fumiaki.xyz/realsense-robotic-devkit-setup/</guid>
-      <pubDate>Wed, 28 Sep 2016 15:44:21 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;標題の通り，Intel の &lt;a href=&quot;https://software.intel.com/en-us/realse
-        
-      
-      </description>
-      
-      <comments>https://fumiaki.xyz/realsense-robotic-devkit-setup/#disqus_thread</comments>
     </item>
     
   </channel>
