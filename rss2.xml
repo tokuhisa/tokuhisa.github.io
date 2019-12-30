@@ -4,17 +4,34 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>fumiaki.xyz</title>
-    <link>http://fumiaki.xyz/</link>
+    <link>https://fumiaki.xyz/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 16 May 2019 13:29:12 GMT</pubDate>
+    <pubDate>Mon, 30 Dec 2019 11:50:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>Oculus QuestのHand TrackingでユニティちゃんとVRダンス + C97宣伝①</title>
+      <link>https://fumiaki.xyz/c97-001/</link>
+      <guid>https://fumiaki.xyz/c97-001/</guid>
+      <pubDate>Mon, 30 Dec 2019 12:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;Oculus QuestのHand Trackingが使えるようになりました～。そこで、コミケ用に作ったユニティちゃんとダン
+        
+      
+      </description>
+      
+      <comments>https://fumiaki.xyz/c97-001/#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>声質変換に挑戦　#2</title>
-      <link>http://fumiaki.xyz/voice-conversion-002/</link>
-      <guid>http://fumiaki.xyz/voice-conversion-002/</guid>
+      <link>https://fumiaki.xyz/voice-conversion-002/</link>
+      <guid>https://fumiaki.xyz/voice-conversion-002/</guid>
       <pubDate>Thu, 16 May 2019 13:18:55 GMT</pubDate>
       <description>
       
@@ -25,13 +42,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/voice-conversion-002/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/voice-conversion-002/#disqus_thread</comments>
     </item>
     
     <item>
       <title>声質変換に挑戦　#1</title>
-      <link>http://fumiaki.xyz/voice-conversion-001/</link>
-      <guid>http://fumiaki.xyz/voice-conversion-001/</guid>
+      <link>https://fumiaki.xyz/voice-conversion-001/</link>
+      <guid>https://fumiaki.xyz/voice-conversion-001/</guid>
       <pubDate>Sun, 05 May 2019 10:50:53 GMT</pubDate>
       <description>
       
@@ -42,13 +59,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/voice-conversion-001/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/voice-conversion-001/#disqus_thread</comments>
     </item>
     
     <item>
       <title>複数の感覚による知覚表象</title>
-      <link>http://fumiaki.xyz/representation-001/</link>
-      <guid>http://fumiaki.xyz/representation-001/</guid>
+      <link>https://fumiaki.xyz/representation-001/</link>
+      <guid>https://fumiaki.xyz/representation-001/</guid>
       <pubDate>Sun, 03 Mar 2019 14:55:00 GMT</pubDate>
       <description>
       
@@ -63,13 +80,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/representation-001/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/representation-001/#disqus_thread</comments>
     </item>
     
     <item>
       <title>チャットボット開発 その３ 最初の試作</title>
-      <link>http://fumiaki.xyz/chatbot-development-003/</link>
-      <guid>http://fumiaki.xyz/chatbot-development-003/</guid>
+      <link>https://fumiaki.xyz/chatbot-development-003/</link>
+      <guid>https://fumiaki.xyz/chatbot-development-003/</guid>
       <pubDate>Sat, 16 Feb 2019 16:10:00 GMT</pubDate>
       <description>
       
@@ -81,13 +98,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/chatbot-development-003/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/chatbot-development-003/#disqus_thread</comments>
     </item>
     
     <item>
       <title>チャットボット開発 その２ データの埋め込み・取得・保存</title>
-      <link>http://fumiaki.xyz/chatbot-development-002/</link>
-      <guid>http://fumiaki.xyz/chatbot-development-002/</guid>
+      <link>https://fumiaki.xyz/chatbot-development-002/</link>
+      <guid>https://fumiaki.xyz/chatbot-development-002/</guid>
       <pubDate>Thu, 07 Feb 2019 13:40:00 GMT</pubDate>
       <description>
       
@@ -98,13 +115,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/chatbot-development-002/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/chatbot-development-002/#disqus_thread</comments>
     </item>
     
     <item>
       <title>チャットボット開発 その１ 環境構築</title>
-      <link>http://fumiaki.xyz/chatbot-development-001/</link>
-      <guid>http://fumiaki.xyz/chatbot-development-001/</guid>
+      <link>https://fumiaki.xyz/chatbot-development-001/</link>
+      <guid>https://fumiaki.xyz/chatbot-development-001/</guid>
       <pubDate>Mon, 04 Feb 2019 12:20:00 GMT</pubDate>
       <description>
       
@@ -116,13 +133,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/chatbot-development-001/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/chatbot-development-001/#disqus_thread</comments>
     </item>
     
     <item>
       <title>ROSのアプリ開発環境セットアップ</title>
-      <link>http://fumiaki.xyz/ros-app-development-setup/</link>
-      <guid>http://fumiaki.xyz/ros-app-development-setup/</guid>
+      <link>https://fumiaki.xyz/ros-app-development-setup/</link>
+      <guid>https://fumiaki.xyz/ros-app-development-setup/</guid>
       <pubDate>Mon, 10 Oct 2016 13:08:00 GMT</pubDate>
       <description>
       
@@ -133,13 +150,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/ros-app-development-setup/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/ros-app-development-setup/#disqus_thread</comments>
     </item>
     
     <item>
       <title>Intel の RealSense Robotic Development Kit を買った</title>
-      <link>http://fumiaki.xyz/realsense-robotic-devkit-setup/</link>
-      <guid>http://fumiaki.xyz/realsense-robotic-devkit-setup/</guid>
+      <link>https://fumiaki.xyz/realsense-robotic-devkit-setup/</link>
+      <guid>https://fumiaki.xyz/realsense-robotic-devkit-setup/</guid>
       <pubDate>Wed, 28 Sep 2016 15:44:21 GMT</pubDate>
       <description>
       
@@ -150,13 +167,13 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/realsense-robotic-devkit-setup/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/realsense-robotic-devkit-setup/#disqus_thread</comments>
     </item>
     
     <item>
       <title>なめろうとさんが焼きを作った</title>
-      <link>http://fumiaki.xyz/namerou-and-sanga-yaki/</link>
-      <guid>http://fumiaki.xyz/namerou-and-sanga-yaki/</guid>
+      <link>https://fumiaki.xyz/namerou-and-sanga-yaki/</link>
+      <guid>https://fumiaki.xyz/namerou-and-sanga-yaki/</guid>
       <pubDate>Mon, 19 Sep 2016 12:37:09 GMT</pubDate>
       <description>
       
@@ -168,24 +185,7 @@
       
       </description>
       
-      <comments>http://fumiaki.xyz/namerou-and-sanga-yaki/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>JupyterLabの拡張機能を作ってみた</title>
-      <link>http://fumiaki.xyz/jupyterlab-sample-extension/</link>
-      <guid>http://fumiaki.xyz/jupyterlab-sample-extension/</guid>
-      <pubDate>Mon, 19 Sep 2016 01:22:35 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;JupyterLabに拡張機能の仕組みが提供されたようなので，試しに拡張機能を作ってみました．&lt;br&gt;まだ安定版ではないよう
-        
-      
-      </description>
-      
-      <comments>http://fumiaki.xyz/jupyterlab-sample-extension/#disqus_thread</comments>
+      <comments>https://fumiaki.xyz/namerou-and-sanga-yaki/#disqus_thread</comments>
     </item>
     
   </channel>
