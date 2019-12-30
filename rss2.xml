@@ -8,8 +8,25 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 30 Dec 2019 11:50:54 GMT</pubDate>
+    <pubDate>Mon, 30 Dec 2019 12:58:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>写真から等身大パネルの3Dオブジェクトを簡単に作ってAR + C97宣伝②</title>
+      <link>https://fumiaki.xyz/c97-002/</link>
+      <guid>https://fumiaki.xyz/c97-002/</guid>
+      <pubDate>Mon, 30 Dec 2019 13:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;AR用の3DオブジェクトをGUIでポチポチしながら作るのは大変なので、ある程度決まった形式のものは用意するのが簡単な素材から
+        
+      
+      </description>
+      
+      <comments>https://fumiaki.xyz/c97-002/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Oculus QuestのHand TrackingでユニティちゃんとVRダンス + C97宣伝①</title>
@@ -168,24 +185,6 @@
       </description>
       
       <comments>https://fumiaki.xyz/realsense-robotic-devkit-setup/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>なめろうとさんが焼きを作った</title>
-      <link>https://fumiaki.xyz/namerou-and-sanga-yaki/</link>
-      <guid>https://fumiaki.xyz/namerou-and-sanga-yaki/</guid>
-      <pubDate>Mon, 19 Sep 2016 12:37:09 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;スーパーで刺身を買ってきて，なめろうとさんが焼きを作りました．&lt;br&gt;作業時間は30分くらいでした．&lt;/p&gt;
-&lt;h2 id=
-        
-      
-      </description>
-      
-      <comments>https://fumiaki.xyz/namerou-and-sanga-yaki/#disqus_thread</comments>
     </item>
     
   </channel>
