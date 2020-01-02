@@ -8,8 +8,25 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 30 Dec 2019 23:07:50 GMT</pubDate>
+    <pubDate>Thu, 02 Jan 2020 06:15:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>冬コミ（C97）サークル参加報告と2020年の抱負</title>
+      <link>https://fumiaki.xyz/c97-004/</link>
+      <guid>https://fumiaki.xyz/c97-004/</guid>
+      <pubDate>Thu, 02 Jan 2020 06:00:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;あけましておめでとうございます。無事に冬コミで新刊の頒布ができました。サークルに来てくださった皆様ありがとうございました。十
+        
+      
+      </description>
+      
+      <comments>https://fumiaki.xyz/c97-004/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Deep Learningでオタクグッズ・ムービーメーカーAI + C97宣伝③</title>
@@ -168,23 +185,6 @@
       </description>
       
       <comments>https://fumiaki.xyz/chatbot-development-001/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>ROSのアプリ開発環境セットアップ</title>
-      <link>https://fumiaki.xyz/ros-app-development-setup/</link>
-      <guid>https://fumiaki.xyz/ros-app-development-setup/</guid>
-      <pubDate>Mon, 10 Oct 2016 13:08:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;RealSenseを使ったアプリケーションを開発するために，ROSのセットアップを行いました．普段利用しているMacのOS 
-        
-      
-      </description>
-      
-      <comments>https://fumiaki.xyz/ros-app-development-setup/#disqus_thread</comments>
     </item>
     
   </channel>
