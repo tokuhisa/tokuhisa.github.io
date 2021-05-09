@@ -8,8 +8,26 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 03 Jan 2020 23:10:59 GMT</pubDate>
+    <pubDate>Sun, 09 May 2021 14:37:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>ダミーヘッドマイクを作ってみた</title>
+      <link>https://fumiaki.xyz/20210509-dummy-head-microphone/</link>
+      <guid>https://fumiaki.xyz/20210509-dummy-head-microphone/</guid>
+      <pubDate>Sun, 09 May 2021 14:40:00 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;オーディオに関する勉強をしようと思い、GWにダミーヘッドマイクの自作をしてみました。&lt;/p&gt;
+&lt;p&gt;ダミーヘッドマイクの自作
+        
+      
+      </description>
+      
+      <comments>https://fumiaki.xyz/20210509-dummy-head-microphone/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>冬コミ（C97）サークル参加報告と2020年の抱負</title>
@@ -167,24 +185,6 @@
       </description>
       
       <comments>https://fumiaki.xyz/chatbot-development-002/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>チャットボット開発 その１ 環境構築</title>
-      <link>https://fumiaki.xyz/chatbot-development-001/</link>
-      <guid>https://fumiaki.xyz/chatbot-development-001/</guid>
-      <pubDate>Mon, 04 Feb 2019 12:20:00 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;はじめに&quot;&gt;&lt;a href=&quot;#はじめに&quot; class=&quot;headerlink&quot; title=&quot;はじめに&quot;&gt;&lt;/a&gt;はじめに&lt;/h2&gt;&lt;p&gt;チャットボット(Chatbot)開発はじめました！&lt;/p&gt;
-&lt;p&gt;学生のころからたまに対話アプリっぽいものは作ってましたが、
-        
-      
-      </description>
-      
-      <comments>https://fumiaki.xyz/chatbot-development-001/#disqus_thread</comments>
     </item>
     
   </channel>
